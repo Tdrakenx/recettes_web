@@ -1,0 +1,308 @@
+/* À ajouter à la fin de assets/css/style.css
+   Couleurs estimées à l'œil depuis la capture : à remplacer par les valeurs exactes de Figma. */
+
+/* playfair-display-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/playfair-display-v40-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* playfair-display-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/playfair-display-v40-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lato-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lato-v25-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lato-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/lato-v25-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --bleu-fonce: #163a5b; /* fond du hero */
+  --bleu-moyen: #2e75a8; /* bouton, bloc photo */
+  --bleu-titre: #1f4e79; /* sous-titres, lien actif */
+  --fond-clair: #f3f7fb; /* fond des sections claires */
+  --texte: #14202e; /* texte courant */
+  --texte-attenue: #44556a; /* texte secondaire */
+  --texte-footer: #bfcddd;
+  --bordure: #d5e0ec; /* bordures, séparateurs */
+  --accent: #e0a100; /* doré : étoiles de notation ? */
+  --police-titre: "Playfair Display", serif;
+  --police-texte: "Lato", sans-serif;
+}
+
+body {
+  font-family: var(--police-texte);
+  color: var(--texte);
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+  font-family: var(--police-titre);
+}
+
+/* Navbar */
+.site-nav {
+  background: #fff;
+  border-bottom: 2px solid var(--bleu-fonce);
+}
+.site-nav .nav-link {
+  color: var(--texte);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+.site-nav .nav-link.active {
+  color: var(--bleu-titre);
+  border-bottom: 2px solid var(--bleu-titre);
+}
+.nav-droite {
+  margin-left: auto;
+}
+.logo {
+  height: auto;
+  width: 190px;
+}
+
+/* Hero */
+.hero {
+  background: var(--bleu-fonce);
+  color: #fff;
+  padding: 4rem 0;
+}
+.hero-titre {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+.hero-texte {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 34rem;
+}
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  background: var(--bleu-moyen);
+}
+
+/* Bouton : fond plus clair que le hero + bordure pour rester visible */
+.btn-hero {
+  background: var(--bleu-moyen);
+  color: #fff;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 8px;
+  padding: 0.6rem 1.25rem;
+}
+.btn-hero:hover,
+.btn-hero:focus-visible {
+  background: #fff;
+  color: var(--bleu-fonce);
+}
+
+/* Notre approche */
+.approche {
+  background: var(--fond-clair);
+  padding: 4rem 0;
+}
+.approche-titre {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.approche-sous-titre {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--bleu-titre);
+}
+/* ---------- Pages intérieures ---------- */
+.page-clair {
+  background: var(--fond-clair);
+  padding: 3rem 0 4rem;
+}
+.page-blanc {
+  background: #fff;
+  padding: 3rem 0 4rem;
+}
+.page-titre {
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.page-intro {
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+.bloc-titre {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.5rem;
+}
+.bloc-texte {
+  font-size: 0.85rem;
+  max-width: 40rem;
+}
+
+/* ---------- Bouton (sans Bootstrap) ---------- */
+.bouton {
+  display: inline-block;
+  background: var(--bleu-titre);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.bouton:hover,
+.bouton:focus-visible {
+  background: var(--bleu-fonce);
+  color: #fff;
+}
+
+/* ---------- Cartes recettes ---------- */
+.recette-carte {
+  background: #fff;
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.recette-visuel,
+.recette-image {
+  width: 100%;
+  height: 11rem;
+}
+.recette-visuel {
+  background: var(--bleu-moyen);
+  color: #fff;
+  font-family: var(--police-titre);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recette-image {
+  object-fit: cover;
+}
+.recette-corps {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.recette-titre {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.recette-meta {
+  font-size: 0.75rem;
+  color: var(--texte-attenue);
+  margin-bottom: 0.5rem;
+}
+.recette-texte {
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+.recette-corps .bouton {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ---------- À propos ---------- */
+.equipe-visuel,
+.equipe-image {
+  width: 100%;
+  height: 14rem;
+  border-radius: 8px;
+}
+.equipe-visuel {
+  background: var(--bleu-moyen);
+  color: #fff;
+  font-family: var(--police-titre);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.equipe-image {
+  object-fit: cover;
+}
+
+.membre {
+  background: #fff;
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+  padding: 1.25rem;
+  height: 100%;
+}
+.membre-nom {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--bleu-titre);
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--bordure);
+}
+.membre-role {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* ---------- Pied de page ---------- */
+.site-footer {
+  background: var(--texte);
+  color: #fff;
+  padding: 2rem 0;
+}
+.footer-titre {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.footer-texte {
+  font-size: 0.85rem;
+  color: var(--texte-footer);
+  margin: 0;
+}
+.footer-liens {
+  margin: 0;
+  font-size: 0.85rem;
+}
+.footer-liens li {
+  margin-bottom: 0.4rem;
+}
+.footer-liens a {
+  color: var(--texte-footer);
+  text-decoration: none;
+}
+.footer-liens a:hover,
+.footer-liens a:focus-visible {
+  color: #fff;
+  text-decoration: underline;
+}
