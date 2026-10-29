@@ -236,11 +236,24 @@ h3,
 }
 
 /* ---------- À propos ---------- */
+.apropos2 {
+  padding: 4rem 0;
+}
+.apropos {
+  background: var(--fond-clair);
+  padding: 4rem 0;
+}
+.apropos-titre {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  padding-left: 0%;
+}
 .equipe-visuel,
 .equipe-image {
-  width: 100%;
-  height: 14rem;
-  border-radius: 8px;
+  width: 80%;
+  height: 80%;
 }
 .equipe-visuel {
   background: var(--bleu-moyen);
@@ -252,7 +265,7 @@ h3,
   justify-content: center;
 }
 .equipe-image {
-  object-fit: cover;
+  border-radius: 8px;
 }
 
 .membre {
