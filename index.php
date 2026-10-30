@@ -17,7 +17,7 @@ include __DIR__ . '/includes/header.php';
                 Des recettes testées et expliquées étape par étape : ingrédients, ustensiles,
                 préparation et avis de ceux qui les ont cuisinées.
               </p>
-              <a class="btn btn-hero" href="recettes.php">Découvrir les recettes</a>
+              <a class="btn btn-hero" href="recette1.php">Découvrir les recettes</a>
             </div>
             <div class="col-lg-6">
               <img src="assets/images/accueil.jpg"

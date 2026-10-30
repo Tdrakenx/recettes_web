@@ -319,3 +319,33 @@ h3,
   color: #fff;
   text-decoration: underline;
 }
+
+p.footer-liens {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.liste-recettes {
+  background: #fff;
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+  padding: 1.25rem;
+  height: 100%;
+}
+.liste-recettes-dev {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--bleu-titre);
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--bordure);
+}
+.liste-recettes-devel {
+  font-size: 0.85rem;
+  margin: 0;
+}
+div a.footer-liens {
+  color: #14202e;
+  text-decoration: none;
+}

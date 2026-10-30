@@ -50,7 +50,7 @@ function ariaCurrent(string $page, string $pageActive): string
                 <a class="nav-link <?= lienActif('accueil', $pageActive) ?>" href="index.php" <?= ariaCurrent('accueil', $pageActive) ?>>Accueil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link <?= lienActif('recettes', $pageActive) ?>" href="recettes.php" <?= ariaCurrent('recettes', $pageActive) ?>>Recettes</a>
+                <a class="nav-link <?= lienActif('recettes', $pageActive) ?>" href="recette1.php" <?= ariaCurrent('recettes', $pageActive) ?>>Recettes</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link <?= lienActif('a-propos', $pageActive) ?>" href="a-propos.php" <?= ariaCurrent('a-propos', $pageActive) ?>>À propos</a>
@@ -60,3 +60,4 @@ function ariaCurrent(string $page, string $pageActive): string
         </div>
       </nav>
     </header>
+    

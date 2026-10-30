@@ -1,27 +1,12 @@
-<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Les Petits Plats - Tarte Tatin</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- En-tête / Navigation -->
-    <header>
-      <div class="logo">Les Petits Plats</div>
-      <nav>
-        <a href="#">Accueil</a>
-        <a href="#" class="active">Recettes</a>
-        <a href="#">À propos</a>
-      </nav>
-    </header>
+<?php
+include __DIR__ . '/includes/header.php';
+?>
 
     <main class="container">
       <!-- Section Titre et Infos -->
-      <section class="recipe-header">
-        <h1>Tarte Tatin</h1>
-        <p class="description">
+      <section class="apropos2">
+        <h1 class="apropos-titre">Tarte Tatin</h1>
+        <p class="liste-recettes-devel">
           Née dans l'Hôtel Tatin à Lamotte-Beuvron, cette tarte renversée aux
           pommes caramélisées est un grand classique français.
         </p>
@@ -49,9 +34,9 @@
 
       <!-- Section Ingredients & Ustensiles (Cote a cote) -->
       <div class="grid-2-columns">
-        <section class="card">
-          <h2>Ingredients</h2>
-          <ul>
+        <section class="liste-recettes">
+          <h2 class="liste-recettes-dev">Ingredients</h2>
+          <ul class="liste-recettes-devel">
             <li>1 kg de pommes (reinettes ou boskoop)</li>
             <li>1 pate feuilletee pur beurre</li>
             <li>120 g de beurre demi-sel</li>
@@ -60,9 +45,9 @@
           </ul>
         </section>
 
-        <section class="card">
-          <h2>Ustensiles</h2>
-          <ul>
+        <section class="liste-recettes">
+          <h2 class="liste-recettes-dev">Ustensiles</h2>
+          <ul class="liste-recettes-devel">
             <li>Moule a tarte Tatin ou poele allant au four (24 cm)</li>
             <li>Couteau d'office et econome</li>
             <li>Spatule en bois</li>
@@ -73,9 +58,9 @@
       </div>
 
       <!-- Section Preparation -->
-      <section class="card preparation">
-        <h2>Préparation</h2>
-        <ol>
+      <section class="liste-recettes">
+        <h2 class="liste-recettes-dev">Préparation</h2>
+        <ol class="liste-recettes-devel">
           <li>
             Préchauffez le four à 180 °C. Épluchez les pommes, coupez-les en
             quartiers et retirez le cœur.
@@ -104,18 +89,18 @@
 
       <!-- Section Note & Commentaire -->
       <div class="grid-2-columns">
-        <section class="card">
-          <h2>Note</h2>
+        <section class="liste-recettes">
+          <h2 class="liste-recettes-dev">Note</h2>
           <div class="rating">
             <span class="stars">★★★★★</span>
             <span class="score">4.5 / 5</span>
           </div>
         </section>
 
-        <section class="card">
-          <h2>Commentaire</h2>
+        <section class="liste-recettes">
+          <h2 class="liste-recettes-dev">Commentaire</h2>
           <blockquote class="comment">
-            <p>
+            <p class="liste-recettes-devel">
               "Le caramel est la clé : surveillez-le bien. Résultat très
               gourmand, parfait avec une cuillère de crème fraîche."
             </p>
@@ -126,8 +111,7 @@
 
       <!-- Retour à la liste -->
       <div class="footer-link">
-        <a href="#"> &larr ; Retour à la liste des recettes</a>
+        <a href="#" class="footer-liens">Retour à la liste des recettes</a>
       </div>
     </main>
-  </body>
-</html>
+<?php include __DIR__ . '/includes/footer.php'; ?>
